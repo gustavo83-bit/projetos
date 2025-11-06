@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox em formularios</title>
+
+    <style>
+        
+       body {
+        background-color: #e3f5f5;
+       }
+
+       .container-newletter {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #8887b5;
+        border-radius: 8px;
+        background-color: #bec3fd;
+       }
+
+       .form-newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+       }
+
+       .campo {
+        display: flex;
+        flex-direction: column;
+
+       }
+
+       input,textarea{
+        padding: 10px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        font-size: 1em;
+       }
+
+       .botoes{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+       }
+
+       button {
+        padding: 10px 15px;
+        background-color: #1dd309;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+       }
+
+       button:hover {
+        background-color: #00b318;
+        color: #000000;
+       }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Mande mensagens para pessoas</h1>
+
+
+    <div class="container-newletter">
+        <h2>Envie uma mensagem</h2>
+
+        <form class="form-newletter">
+
+           <div class="campo">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Insira o seu nome">
+           </div>
+
+           <div class="campo">
+            <label>Email</label>
+            <input type="email" placeholder="Insira o email">
+           </div>
+
+           <div class="campo">
+            <label>Telefone</label>
+            <input type="text" placeholder="(XX) 9XXXX-XXXX">
+           </div>
+
+           <div class="campo">
+            <label>Mensagem</label>
+            <textarea placeholder="Escreva a mensagem"></textarea>
+           
+           <div class="botoes">
+            <button type="reset">limpar</button>
+            <button type="submit">Enviar</button>
+           </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
